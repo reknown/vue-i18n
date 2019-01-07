@@ -4,6 +4,7 @@ module.exports = {
     },
     messages: {
         title: 'vue i18n Multi-language switching',
-        language: 'language'
+        language: 'language',
+        content: '{discountEn}off'
     }
 }

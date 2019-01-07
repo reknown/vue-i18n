@@ -1,9 +1,10 @@
 <template>
     <div>
-        <h1 class="h1-title">{{ $t("messages.title",{'day': '1'}) }}</h1>
+        <h1 class="h1-title">{{ $t("messages.title") }}</h1>
         <group>
             <selector :title="$t('messages.language')" :options="langList" v-model="langValue" @on-change="changeLang"></selector>
         </group>
+        <p>{{ $t("messages.content",{'discountEn': discountEn,'discountCn': discountCn}) }}</p>
     </div>
 </template>
 
@@ -18,6 +19,8 @@
               return {
                   langValue: 'zh',
                   langList: [{key: 'zh', value: '中文'}, {key: 'en', value: 'English'}],
+                  discountEn: '10%',
+                  discountCn: 9,
               }
           },
           created() {
